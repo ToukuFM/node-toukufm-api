@@ -1,3 +1,4 @@
+// Require the module
 var ToukuFM = require('node-toukufm-api');
 
 // Set up your callback function
@@ -22,5 +23,5 @@ ToukuFM.get_schedule(callback);
 // Schedule from now until 10 days ahead
 ToukuFM.get_schedule_days_ahead(10, callback);
 
-// Get "zones"? - not implemented yet
+// Not implemented yet, coming soon
 ToukuFM.get_zones(callback);

@@ -9,12 +9,17 @@ ToukuFM API wrapper for anyone to use in Node projects.
 
 You can see the JSON output if you log them to the console.
 
-```javascript    
+```javascript
+// Require the module
 var ToukuFM = require('node-toukufm-api');
 
 // Set up your callback function
-// Or use it like api.get_team(function (result) { // do something with result });
-var callback = function(result) {
+var callback = function(err, result) {
+    if (err) {
+        console.log(err.status);
+        console.log(err.error);
+        return;
+    }
     console.log(result);
 }
 
@@ -30,6 +35,23 @@ ToukuFM.get_schedule(callback);
 // Schedule from now until 10 days ahead
 ToukuFM.get_schedule_days_ahead(10, callback);
 
-// Get "zones"? - not implemented yet
+// Not implemented yet, coming soon
 ToukuFM.get_zones(callback);
 ```
+
+## API
+
+| Method | Parameters | URL |
+|---|---|---|
+| `ToukuFM.get_team` | `callback` | <http://toukufm.com/data/team> |
+| `ToukuFM.get_now_playing` | `callback` | <http://toukufm.com/data/nowplaying> |
+| `ToukuFM.get_schedule` | `callback` | <http://toukufm.com/data/schedule> |
+| `ToukuFM.get_schedule_days_ahead` | `days:int`, `callback` | <http://toukufm.com/data/schedule/14> |
+| `ToukuFM.get_zones` | `callback` | <http://toukufm.com/data/zones> |
+
+Note: all the callback functions should have two arguments; `err` and `result`.
+`err` is a boolean so if it is true, you can find the error log in `result`.
+
+## License
+
+This program is licensed under the GPL-3.0 license.
