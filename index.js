@@ -1,6 +1,6 @@
 var request = require('request');
 
-var ToukuFM = function () {
+var ToukuFM = (function () {
 
     var _exec = function (path, callback) {
         if (typeof callback !== 'function')
@@ -40,6 +40,6 @@ var ToukuFM = function () {
             _exec('zones', callback);
         }
     };
-};
+})();
 
 module.exports = ToukuFM;
