@@ -1,6 +1,6 @@
 {
   "name": "node-toukufm-api",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "description": "ToukuFM API wrapper for use in Node projects.",
   "main": "index.js",
   "scripts": {

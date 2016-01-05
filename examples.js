@@ -1,8 +1,12 @@
 var ToukuFM = require('node-toukufm-api');
 
 // Set up your callback function
-// Or use it like api.get_team(function (result) { // do something with result });
-var callback = function(result) {
+var callback = function(err, result) {
+    if (err) {
+        console.log(err.status);
+        console.log(err.error);
+        return;
+    }
     console.log(result);
 }
 
