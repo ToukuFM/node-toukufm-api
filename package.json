@@ -1,0 +1,23 @@
+{
+  "name": "node-toukufm-api",
+  "version": "0.1.0",
+  "description": "ToukuFM API wrapper for use in Node projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "toukufm",
+    "api",
+    "radio station"
+  ],
+  "author": "Bakaboykie",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakaboykie/node-toukufm-api"
+  },
+  "dependencies": {
+    "request": "^2.67.0"
+  }
+}
