@@ -24,4 +24,4 @@ ToukuFM.get_schedule(callback);
 ToukuFM.get_schedule_days_ahead(10, callback);
 
 // Not implemented yet, coming soon
-ToukuFM.get_zones(callback);
+// ToukuFM.get_zones(callback);

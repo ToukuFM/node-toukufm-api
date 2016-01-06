@@ -1,6 +1,6 @@
 {
   "name": "node-toukufm-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ToukuFM API wrapper for use in Node projects.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bakaboykie/node-toukufm-api"
+    "url": "https://github.com/ToukuFM/node-toukufm-api"
   },
   "dependencies": {
     "request": "^2.67.0"
