@@ -10,15 +10,10 @@ var ToukuFM = (function () {
         var url = 'http://www.toukufm.com/data/' + path;
 
         request.get(url, function (err, req, body) {
-            // For some reason, ToukuFM errors don't show up properly here
-            if (err) {
+            try {
+                callback(false, JSON.parse(body));
+            } catch (err) {
                 callback(true, {error: body, status: req.status});
-            } else {
-                try {
-                    callback(false, JSON.parse(body));
-                } catch (err) {
-                    callback(true, {error: body, status: req.status});
-                }
             }
         });
     };
